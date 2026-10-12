@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>แผนการจัดการเรียนรู้ 15 สัปดาห์ - เทคโนโลยีอินเทอร์เน็ตเพื่อสรรพสิ่ง (IoT)</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Fonts: Sarabun & Prompt -->
+  <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@400;500;600;700&family=Sarabun:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <style>
+    body {
+      font-family: 'Sarabun', sans-serif;
+      background-color: #f8fafc;
+    }
+    h1, h2, h3, h4, .font-heading {
+      font-family: 'Prompt', sans-serif;
+    }
+    @media print {
+      .no-print {
+        display: none !important;
+      }
+      body {
+        background-color: #ffffff;
+      }
+      .print-break {
+        page-break-inside: avoid;
+      }
+    }
+  </style>
+</head>
+<body class="text-slate-800 antialiased">
+
+  <!-- Top Navigation / Header -->
+  <header class="bg-gradient-to-r from-teal-900 via-teal-800 to-emerald-800 text-white shadow-lg">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+        <div>
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-teal-700/60 text-teal-100 text-xs font-medium mb-3 border border-teal-500/30">
+            <i data-lucide="cpu" class="w-4 h-4"></i>
+            <span>หลักสูตรฐานสมรรถนะ | แผนการจัดการเรียนรู้ระดับรายวิชา</span>
+          </div>
+          <h1 class="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight">
+            เทคโนโลยีอินเทอร์เน็ตเพื่อสรรพสิ่ง (IoT)
+          </h1>
+          <p class="mt-2 text-teal-100 max-w-3xl text-sm sm:text-base">
+            โครงสร้างและแผนการจัดการเรียนรู้ 15 สัปดาห์ (สัปดาห์ละ 4 ชั่วโมง: ทฤษฎี 1 ชม. / ปฏิบัติ 3 ชม. รวม 60 ชั่วโมง)
+          </p>
+        </div>
+        <div class="no-print flex items-center gap-3">
+          <button onclick="window.print()" class="inline-flex items-center gap-2 bg-white text-teal-900 hover:bg-teal-50 font-heading font-medium px-4 py-2.5 rounded-xl shadow-sm transition">
+            <i data-lucide="printer" class="w-4 h-4"></i>
+            <span>พิมพ์ / บันทึก PDF</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Quick Stats Bar -->
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 mt-8 pt-6 border-t border-teal-700/60">
+        <div class="bg-white/10 backdrop-blur-sm rounded-xl p-4">
+          <div class="text-teal-200 text-xs font-medium">ระยะเวลาเรียน</div>
+          <div class="text-2xl font-bold font-heading mt-1">15 สัปดาห์</div>
+          <div class="text-teal-100 text-xs mt-0.5">รวมทั้งหมด 60 ชั่วโมง (เวลาเรียน 80% = 48 ชั่วโมง)</div>
+        </div>
+        <div class="bg-white/10 backdrop-blur-sm rounded-xl p-4">
+          <div class="text-teal-200 text-xs font-medium">สัดส่วนเวลาเรียน/สัปดาห์</div>
+          <div class="text-2xl font-bold font-heading mt-1">4 ชั่วโมง</div>
+          <div class="text-teal-100 text-xs mt-0.5">ทฤษฎี 1 ชม. | ปฏิบัติ 3 ชม.</div>
+        </div>
+        <div class="bg-white/10 backdrop-blur-sm rounded-xl p-4">
+          <div class="text-teal-200 text-xs font-medium">หน่วยการเรียนรู้</div>
+          <div class="text-2xl font-bold font-heading mt-1">5 หน่วย</div>
+          <div class="text-teal-100 text-xs mt-0.5">14 ใบงาน + 1 โครงงานนวัตกรรม</div>
+        </div>
+        <div class="bg-white/10 backdrop-blur-sm rounded-xl p-4">
+          <div class="text-teal-200 text-xs font-medium">จิตพิสัยหลัก</div>
+          <div class="text-xl font-bold font-heading mt-1">วินัย ใฝ่รู้ ละเอียด รอบคอบ </div>
+          <div class="text-teal-100 text-xs mt-0.5">ปลอดภัยตามมาตรฐานทางไฟฟ้า</div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-10">
+
+    <!-- Section 1: Course Standard & Specifications -->
+    <section class="space-y-6">
+      <!-- Course Learning Outcome Banner -->
+      <div class="bg-gradient-to-r from-amber-50 to-orange-50 border-l-4 border-amber-500 rounded-r-2xl p-6 shadow-sm">
+        <div class="flex items-start gap-4">
+          <div class="p-3 bg-amber-500/10 text-amber-600 rounded-xl shrink-0">
+            <i data-lucide="award" class="w-7 h-7"></i>
+          </div>
+          <div>
+            <h2 class="text-sm font-bold uppercase tracking-wider text-amber-700 font-heading">
+              ผลลัพธ์การเรียนรู้ระดับรายวิชา (Course Learning Outcome)
+            </h2>
+            <p class="text-lg sm:text-xl font-semibold text-slate-900 mt-1">
+              “ติดตั้งและเขียนโปรแกรมควบคุมอุปกรณ์เทคโนโลยีอินเทอร์เน็ตเพื่อสรรพสิ่ง (IoT) กับอุปกรณ์ปลายทาง ด้วยความละเอียด รอบคอบ”
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3-Column Course Details -->
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+        <!-- จุดประสงค์รายวิชา -->
+        <div class="bg-white rounded-2xl p-6 shadow-sm border border-slate-200/80">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="p-2.5 bg-teal-50 text-teal-600 rounded-lg">
+              <i data-lucide="check-circle-2" class="w-5 h-5"></i>
+            </div>
+            <h3 class="text-lg font-bold text-slate-900">จุดประสงค์รายวิชา</h3>
+          </div>
+          <ol class="space-y-2.5 text-sm text-slate-700 list-decimal list-inside">
+            <li>เข้าใจเกี่ยวกับหลักการของอินเทอร์เน็ตเพื่อสรรพสิ่ง</li>
+            <li>มีทักษะในการติดตั้ง เขียนโปรแกรมควบคุมอุปกรณ์กับอินเทอร์เน็ตเพื่อสรรพสิ่ง</li>
+            <li>มีความสามารถในการประยุกต์ใช้อินเทอร์เน็ตเพื่อสรรพสิ่งกับอุปกรณ์ปลายทาง</li>
+            <li>มีเจตคติและกิจนิสัยที่ดีในการปฏิบัติงานด้วยความละเอียด รอบคอบ</li>
+          </ol>
+        </div>
+
+        <!-- สมรรถนะรายวิชา -->
+        <div class="bg-white rounded-2xl p-6 shadow-sm border border-slate-200/80">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="p-2.5 bg-blue-50 text-blue-600 rounded-lg">
+              <i data-lucide="zap" class="w-5 h-5"></i>
+            </div>
+            <h3 class="text-lg font-bold text-slate-900">สมรรถนะรายวิชา</h3>
+          </div>
+          <ol class="space-y-2.5 text-sm text-slate-700 list-decimal list-inside">
+            <li>ประมวลความรู้เกี่ยวกับอินเทอร์เน็ตเพื่อสรรพสิ่งตามหลักการ</li>
+            <li>ติดตั้งและเขียนโปรแกรมควบคุมอุปกรณ์กับอินเทอร์เน็ตเพื่อสรรพสิ่งตามหลักการ</li>
+            <li>ประยุกต์ใช้อินเทอร์เน็ตเพื่อสรรพสิ่งกับอุปกรณ์ปลายทาง</li>
+          </ol>
+        </div>
+
+        <!-- คำอธิบายรายวิชา -->
+        <div class="bg-white rounded-2xl p-6 shadow-sm border border-slate-200/80">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="p-2.5 bg-purple-50 text-purple-600 rounded-lg">
+              <i data-lucide="book-open" class="w-5 h-5"></i>
+            </div>
+            <h3 class="text-lg font-bold text-slate-900">คำอธิบายรายวิชา</h3>
+          </div>
+          <p class="text-sm text-slate-700 leading-relaxed">
+            ศึกษาและปฏิบัติเกี่ยวกับหลักการและขั้นตอนของอินเทอร์เน็ตเพื่อสรรพสิ่ง (IoT) เชื่อมต่อกับอุปกรณ์ปลายทาง โครงสร้างพื้นฐาน สถาปัตยกรรม การเลือกอุปกรณ์ การเลือกแพลตฟอร์มที่เหมาะสมกับงานนวัตกรรม ติดตั้ง เขียนโปรแกรม ควบคุมอุปกรณ์ประยุกต์ใช้เทคโนโลยีอินเทอร์เน็ตเพื่อสรรพสิ่ง (IoT) กับอุปกรณ์ปลายทาง
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 2: Unit Overview Table -->
+    <section class="bg-white rounded-2xl shadow-sm border border-slate-200/80 overflow-hidden print-break">
+      <div class="p-6 border-b border-slate-200 flex items-center justify-between">
+        <div>
+          <h2 class="text-xl font-bold text-slate-900">ตารางโครงสร้างหน่วยการเรียนรู้ (5 หน่วย / 60 ชั่วโมง)</h2>
+          <p class="text-sm text-slate-500 mt-0.5">การแบ่งเวลาเรียนและสมรรถนะประจำหน่วยตลอด 15 สัปดาห์</p>
+        </div>
+      </div>
+      <div class="overflow-x-auto">
+        <table class="w-full text-left border-collapse">
+          <thead>
+            <tr class="bg-slate-50 text-slate-600 text-xs uppercase font-heading border-b border-slate-200">
+              <th class="py-3.5 px-4 font-semibold">หน่วยที่</th>
+              <th class="py-3.5 px-4 font-semibold">ชื่อหน่วยการเรียนรู้</th>
+              <th class="py-3.5 px-4 font-semibold">สมรรถนะประจำหน่วย</th>
+              <th class="py-3.5 px-4 font-semibold text-center">สัปดาห์ที่</th>
+              <th class="py-3.5 px-4 font-semibold text-center">เวลาเรียน (ชม.)</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-200 text-sm">
+            <tr class="hover:bg-slate-50/80">
+              <td class="py-3.5 px-4 font-bold text-teal-700">หน่วยที่ 1</td>
+              <td class="py-3.5 px-4 font-medium text-slate-900">หลักการ โครงสร้างพื้นฐาน และสถาปัตยกรรม IoT</td>
+              <td class="py-3.5 px-4 text-slate-600">ประมวลความรู้เกี่ยวกับหลักการ ขั้นตอน โครงสร้างพื้นฐาน และสถาปัตยกรรมของระบบ IoT</td>
+              <td class="py-3.5 px-4 text-center"><span class="px-2.5 py-1 rounded-full bg-teal-50 text-teal-700 font-medium text-xs">1–2</span></td>
+              <td class="py-3.5 px-4 text-center font-semibold">8</td>
+            </tr>
+            <tr class="hover:bg-slate-50/80">
+              <td class="py-3.5 px-4 font-bold text-blue-700">หน่วยที่ 2</td>
+              <td class="py-3.5 px-4 font-medium text-slate-900">การเลือกใช้อุปกรณ์และแพลตฟอร์มสำหรับงานนวัตกรรม</td>
+              <td class="py-3.5 px-4 text-slate-600">เลือกใช้อุปกรณ์สมองกลฝังตัว เซนเซอร์ อุปกรณ์ปลายทาง และแพลตฟอร์ม IoT ที่เหมาะสมกับงาน</td>
+              <td class="py-3.5 px-4 text-center"><span class="px-2.5 py-1 rounded-full bg-blue-50 text-blue-700 font-medium text-xs">3–4</span></td>
+              <td class="py-3.5 px-4 text-center font-semibold">8</td>
+            </tr>
+            <tr class="hover:bg-slate-50/80">
+              <td class="py-3.5 px-4 font-bold text-indigo-700">หน่วยที่ 3</td>
+              <td class="py-3.5 px-4 font-medium text-slate-900">การติดตั้งและเขียนโปรแกรมควบคุมอุปกรณ์ปลายทาง</td>
+              <td class="py-3.5 px-4 text-slate-600">ติดตั้งวงจรและเขียนโปรแกรมอ่านค่าเซนเซอร์รวมถึงสั่งงานอุปกรณ์ปลายทางอย่างปลอดภัย</td>
+              <td class="py-3.5 px-4 text-center"><span class="px-2.5 py-1 rounded-full bg-indigo-50 text-indigo-700 font-medium text-xs">5–8</span></td>
+              <td class="py-3.5 px-4 text-center font-semibold">16</td>
+            </tr>
+            <tr class="hover:bg-slate-50/80">
+              <td class="py-3.5 px-4 font-bold text-purple-700">หน่วยที่ 4</td>
+              <td class="py-3.5 px-4 font-medium text-slate-900">การเชื่อมต่อเครือข่ายและแพลตฟอร์มควบคุมผ่านคลาวด์</td>
+              <td class="py-3.5 px-4 text-slate-600">เขียนโปรแกรมเชื่อมต่ออุปกรณ์เข้ากับแพลตฟอร์ม IoT เพื่อรับ-ส่งข้อมูลและควบคุมแบบไร้สาย</td>
+              <td class="py-3.5 px-4 text-center"><span class="px-2.5 py-1 rounded-full bg-purple-50 text-purple-700 font-medium text-xs">9–12</span></td>
+              <td class="py-3.5 px-4 text-center font-semibold">16</td>
+            </tr>
+            <tr class="hover:bg-slate-50/80">
+              <td class="py-3.5 px-4 font-bold text-rose-700">หน่วยที่ 5</td>
+              <td class="py-3.5 px-4 font-medium text-slate-900">การประยุกต์ใช้ IoT สร้างสรรค์นวัตกรรม</td>
+              <td class="py-3.5 px-4 text-slate-600">ออกแบบ ติดตั้ง และประยุกต์ใช้ระบบ IoT กับอุปกรณ์ปลายทางเพื่อแก้ปัญหาหรือสร้างนวัตกรรม</td>
+              <td class="py-3.5 px-4 text-center"><span class="px-2.5 py-1 rounded-full bg-rose-50 text-rose-700 font-medium text-xs">13–15</span></td>
+              <td class="py-3.5 px-4 text-center font-semibold">12</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Section 3: Interactive 15-Week Lesson Plan -->
+    <section class="space-y-6">
+      <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
+        <div>
+          <h2 class="text-2xl font-bold text-slate-900">แผนการจัดการเรียนรู้รายสัปดาห์ (สัปดาห์ที่ 1–15)</h2>
+          <p class="text-sm text-slate-500">คลิกเลือกหน่วยการเรียนรู้หรือค้นหาคำสำคัญเพื่อดูรายละเอียดแต่ละสัปดาห์</p>
+        </div>
+
+        <!-- Search Input -->
+        <div class="no-print relative w-full md:w-72">
+          <i data-lucide="search" class="w-4 h-4 text-slate-400 absolute left-3.5 top-3"></i>
+          <input
+            type="text"
+            id="searchInput"
+            oninput="filterWeeks()"
+            placeholder="ค้นหา เช่น Relay, MQTT, ESP32..."
+            class="w-full pl-10 pr-4 py-2 bg-white border border-slate-300 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-teal-500"
+          />
+        </div>
+      </div>
+
+      <!-- Unit Filter Tabs -->
+      <div class="no-print flex flex-wrap gap-2" id="unitTabs">
+        <button onclick="setUnitFilter('all')" data-unit="all" class="unit-tab active bg-teal-700 text-white px-4 py-2 rounded-xl text-sm font-heading font-medium transition">
+          ทั้งหมด (15 สัปดาห์)
+        </button>
+        <button onclick="setUnitFilter(1)" data-unit="1" class="unit-tab bg-white text-slate-700 hover:bg-slate-100 border border-slate-200 px-4 py-2 rounded-xl text-sm font-heading font-medium transition">
+          หน่วยที่ 1: หลักการ/สถาปัตยกรรม
+        </button>
+        <button onclick="setUnitFilter(2)" data-unit="2" class="unit-tab bg-white text-slate-700 hover:bg-slate-100 border border-slate-200 px-4 py-2 rounded-xl text-sm font-heading font-medium transition">
+          หน่วยที่ 2: อุปกรณ์/แพลตฟอร์ม
+        </button>
+        <button onclick="setUnitFilter(3)" data-unit="3" class="unit-tab bg-white text-slate-700 hover:bg-slate-100 border border-slate-200 px-4 py-2 rounded-xl text-sm font-heading font-medium transition">
+          หน่วยที่ 3: ติดตั้ง/ควบคุมอุปกรณ์
+        </button>
+        <button onclick="setUnitFilter(4)" data-unit="4" class="unit-tab bg-white text-slate-700 hover:bg-slate-100 border border-slate-200 px-4 py-2 rounded-xl text-sm font-heading font-medium transition">
+          หน่วยที่ 4: เครือข่าย/Cloud IoT
+        </button>
+        <button onclick="setUnitFilter(5)" data-unit="5" class="unit-tab bg-white text-slate-700 hover:bg-slate-100 border border-slate-200 px-4 py-2 rounded-xl text-sm font-heading font-medium transition">
+          หน่วยที่ 5: โครงงานนวัตกรรม
+        </button>
+      </div>
+
+      <!-- Weeks Grid Container -->
+      <div id="weeksContainer" class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <!-- Rendered by JavaScript -->
+      </div>
+    </section>
+
+    <!-- Section 4: Assessment & Evaluation Breakdown -->
+    <section class="bg-white rounded-2xl p-6 shadow-sm border border-slate-200/80 print-break">
+      <h2 class="text-xl font-bold text-slate-900 mb-4">สัดส่วนการวัดและประเมินผลรายวิชา (100 คะแนน)</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <div class="p-4 rounded-xl bg-teal-50/70 border border-teal-200">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-bold uppercase text-teal-700 font-heading">จิตพิสัยและเวลาเรียน</span>
+            <span class="text-xl font-bold text-teal-800 font-heading">20%</span>
+          </div>
+          <p class="text-xs text-slate-600 mt-2">
+            วินัย ใฝ่รู้ ละเอียด รอบคอบ ความปลอดภัยในการต่อวงจรไฟฟ้า การจัดเก็บอุปกรณ์และเครื่องมือ
+          </p>
+        </div>
+
+        <div class="p-4 rounded-xl bg-blue-50/70 border border-blue-200">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-bold uppercase text-blue-700 font-heading">ใบงานปฏิบัติการรายสัปดาห์</span>
+            <span class="text-xl font-bold text-blue-800 font-heading">40%</span>
+          </div>
+          <p class="text-xs text-slate-600 mt-2">
+            ประเมินจากใบงานที่ 1–12 ด้านความถูกต้องของการต่อวงจรและการเขียนโปรแกรมควบคุม
+          </p>
+        </div>
+
+        <div class="p-4 rounded-xl bg-amber-50/70 border border-amber-200">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-bold uppercase text-amber-700 font-heading">สอบปฏิบัติกลางภาค</span>
+            <span class="text-xl font-bold text-amber-800 font-heading">15%</span>
+          </div>
+          <p class="text-xs text-slate-600 mt-2">
+            ทดสอบในสัปดาห์ที่ 8: การติดตั้งวงจรอ่านค่าเซนเซอร์และสั่งงานอุปกรณ์ปลายทางผ่าน Relay
+          </p>
+        </div>
+
+        <div class="p-4 rounded-xl bg-rose-50/70 border border-rose-200">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-bold uppercase text-rose-700 font-heading">โครงงานนวัตกรรม IoT</span>
+            <span class="text-xl font-bold text-rose-800 font-heading">25%</span>
+          </div>
+          <p class="text-xs text-slate-600 mt-2">
+            ประเมินในสัปดาห์ที่ 13–15: การประยุกต์ใช้ระบบ IoT กับอุปกรณ์ปลายทางเพื่อแก้ปัญหาจริง
+          </p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 text-center text-xs text-slate-400 border-t border-slate-200 mt-8">
+    เอกสารแผนการจัดการเรียนรู้ฐานสมรรถนะ รายวิชาเทคโนโลยีอินเทอร์เน็ตเพื่อสรรพสิ่ง (IoT) | สอนสัปดาห์ละ 4 ชั่วโมง (15 สัปดาห์) : By Visutr Maschai
+  </footer>
+
+  <!-- Data & Interactive Script -->
+  <script>
+    const weeksData = [
+      {
+        week: 1,
+        unit: 1,
+        unitName: "หน่วยที่ 1: หลักการและสถาปัตยกรรม IoT",
+        color: "teal",
+        title: "แนวคิด หลักการ และองค์ประกอบของเทคโนโลยี IoT",
+        theory: "ความหมาย ความสำคัญ วิวัฒนาการ ขั้นตอนการทำงานของระบบ IoT และการประยุกต์ใช้ในภาคอุตสาหกรรมและชีวิตประจำวัน",
+        lab: "ใบงานที่ 1: วิเคราะห์กรณีศึกษาระบบ IoT รอบตัว จำแนกส่วนประกอบ Input (Sensor) - Process (Controller) - Network - Output (Actuator)",
+        attitude: "ความละเอียดในการสังเกตและวิเคราะห์ระบบงานอย่างเป็นขั้นตอน"
+      },
+      {
+        week: 2,
+        unit: 1,
+        unitName: "หน่วยที่ 1: หลักการและสถาปัตยกรรม IoT",
+        color: "teal",
+        title: "โครงสร้างพื้นฐาน สถาปัตยกรรม และโปรโตคอลสื่อสารในระบบ IoT",
+        theory: "สถาปัตยกรรม IoT (3-Layer / 4-Layer Architecture), โครงสร้างพื้นฐานเครือข่าย และโปรโตคอลการสื่อสารข้อมูล (Wi-Fi, Bluetooth, LoRa, HTTP, MQTT)",
+        lab: "ใบงานที่ 2: ออกแบบผังสถาปัตยกรรมระบบ IoT (System Architecture Diagram) ตามโจทย์สถานการณ์ที่กำหนด",
+        attitude: "ความรอบคอบในการวางผังโครงสร้างระบบและการเลือกช่องทางสื่อสาร"
+      },
+      {
+        week: 3,
+        unit: 2,
+        unitName: "หน่วยที่ 2: อุปกรณ์และแพลตฟอร์ม IoT",
+        color: "blue",
+        title: "การเลือกใช้อุปกรณ์ควบคุม (Microcontroller) และอุปกรณ์ปลายทาง",
+        theory: "เปรียบเทียบไมโครคอนโทรลเลอร์ (ESP8266, ESP32) การเลือกใช้เซนเซอร์ และอุปกรณ์ขับเคลื่อนปลายทาง (Relay, Motor, Solenoid Valve) ให้เหมาะกับพิกัดไฟฟ้า",
+        lab: "ใบงานที่ 3: อ่าน Datasheet ของบอร์ดควบคุมและอุปกรณ์ปลายทาง เพื่อจัดทำรายการวัสดุอุปกรณ์ (BOM) สำหรับโจทย์งานนวัตกรรม",
+        attitude: "ความละเอียดรอบคอบในการตรวจสอบพิกัดแรงดันไฟฟ้า (3.3V / 5V / 220VAC) เพื่อป้องกันอุปกรณ์เสียหาย"
+      },
+      {
+        week: 4,
+        unit: 2,
+        unitName: "หน่วยที่ 2: อุปกรณ์และแพลตฟอร์ม IoT",
+        color: "blue",
+        title: "การเลือกแพลตฟอร์ม IoT และการจัดเตรียมสภาพแวดล้อมการพัฒนาโปรแกรม",
+        theory: "เปรียบเทียบจุดเด่นและข้อจำกัดของแพลตฟอร์ม IoT (Blynk, NETPIE, Node-RED, ThingSpeak, MQTT Broker) และการเลือกให้เหมาะกับงานนวัตกรรม",
+        lab: "ใบงานที่ 4: ติดตั้งโปรแกรม Arduino IDE / VS Code ติดตั้ง Board Manager/Library และทดสอบอัปโหลดโปรแกรมพื้นฐาน (Blink & Serial Monitor)",
+        attitude: "ความมีระเบียบวินัยในการตั้งค่าระบบและการตรวจสอบพอร์ตเชื่อมต่อก่อนใช้งาน"
+      },
+      {
+        week: 5,
+        unit: 3,
+        unitName: "หน่วยที่ 3: ติดตั้งและควบคุมอุปกรณ์ปลายทาง",
+        color: "indigo",
+        title: "การติดตั้งและเขียนโปรแกรมควบคุมอุปกรณ์ปลายทางแบบ Digital Output",
+        theory: "โครงสร้างภาษาโปรแกรมเบื้องต้น การกำหนดขาพอร์ต (Pinout) และหลักการส่งสัญญาณ Digital Output และ PWM",
+        lab: "ใบงานที่ 5: ต่อวงจรและเขียนโปรแกรมควบคุมหลอดไฟ LED, Buzzer และการหรี่แสง/ควบคุมความเร็วด้วยสัญญาณ PWM",
+        attitude: "ความรอบคอบในการตรวจสอบขั้วอุปกรณ์และค่าความต้านทานก่อนจ่ายไฟเลี้ยง"
+      },
+      {
+        week: 6,
+        unit: 3,
+        unitName: "หน่วยที่ 3: ติดตั้งและควบคุมอุปกรณ์ปลายทาง",
+        color: "indigo",
+        title: "การติดตั้งและเขียนโปรแกรมรับค่าจากเซนเซอร์แบบ Digital และ Analog Input",
+        theory: "หลักการอ่านค่าสัญญาณ Digital Input (Switch, PIR Sensor) และวงจรแปลงสัญญาณ Analog to Digital (ADC) เช่น LDR หรือวัดความชื้นในดิน",
+        lab: "ใบงานที่ 6: ต่อวงจรอ่านค่าจากเซนเซอร์ แสดงผลผ่าน Serial Monitor และเขียนเงื่อนไข (if-else) สั่งเปิด-ปิดอุปกรณ์อัตโนมัติ",
+        attitude: "ความละเอียดในการสอบเทียบค่า (Calibration) ของเซนเซอร์ให้ตรงกับสภาพแวดล้อมจริง"
+      },
+      {
+        week: 7,
+        unit: 3,
+        unitName: "หน่วยที่ 3: ติดตั้งและควบคุมอุปกรณ์ปลายทาง",
+        color: "indigo",
+        title: "การเชื่อมต่อเซนเซอร์ดิจิทัลเฉพาะทางและจอแสดงผล (I2C / One-Wire)",
+        theory: "หลักการสื่อสารข้อมูลระหว่างไมโครคอนโทรลเลอร์กับโมดูลภายนอกผ่านบัส I2C และ One-Wire",
+        lab: "ใบงานที่ 7: ต่อวงจรและเขียนโปรแกรมอ่านค่าอุณหภูมิและความชื้น (DHT22) แสดงผลออกทางหน้าจอ OLED หรือ LCD (I2C)",
+        attitude: "ความรอบคอบในการเรียกใช้ Library และการตรวจสอบ Address ของอุปกรณ์ I2C"
+      },
+      {
+        week: 8,
+        unit: 3,
+        unitName: "หน่วยที่ 3: ติดตั้งและควบคุมอุปกรณ์ปลายทาง",
+        color: "indigo",
+        badge: "สอบปฏิบัติกลางภาค",
+        title: "การติดตั้งและควบคุมอุปกรณ์ไฟฟ้ากำลังปลายทางผ่านโมดูลรีเลย์ (Relay Module)",
+        theory: "หลักการทำงานของรีเลย์ การแยกกราวด์ (Opto-isolator) และการต่อวงจรควบคุมเครื่องใช้ไฟฟ้ากระแสสลับ (AC) หรือปั๊มน้ำ/โซลินอยด์วาล์วอย่างปลอดภัย",
+        lab: "ใบงานที่ 8: ติดตั้งวงจรควบคุมหลอดไฟ AC หรือปั๊มน้ำ DC ผ่าน Relay Module โดยสั่งงานอัตโนมัติจากค่าเซนเซอร์ (สอบปฏิบัติกลางภาค)",
+        attitude: "เน้นย้ำสูงสุดเรื่องความปลอดภัยทางไฟฟ้า การขันขั้วต่อ Terminal ให้แน่นหนา และตรวจสอบวงจรซ้ำก่อนจ่ายไฟ"
+      },
+      {
+        week: 9,
+        unit: 4,
+        unitName: "หน่วยที่ 4: เครือข่ายและแพลตฟอร์มคลาวด์",
+        color: "purple",
+        title: "การเขียนโปรแกรมเชื่อมต่อเครือข่ายไร้สาย (Wi-Fi) และ Web Server พื้นฐาน",
+        theory: "โครงสร้างคำสั่งเชื่อมต่อ Wi-Fi บนบอร์ด ESP32/ESP8266 การจัดการสถานะการเชื่อมต่อ (Re-connection) และการจำลอง Web Server บนบอร์ด",
+        lab: "ใบงานที่ 9: เขียนโปรแกรมเชื่อมต่อ Wi-Fi และสร้างหน้าเว็บเพจบนบอร์ดเพื่อกดปุ่มเปิด-ปิดอุปกรณ์ปลายทางผ่านเครือข่ายวงแลนเดียวกัน",
+        attitude: "การเขียนโค้ดดักจับข้อผิดพลาดเมื่อสัญญาณอินเทอร์เน็ตหลุด (ความรอบคอบด้านซอฟต์แวร์)"
+      },
+      {
+        week: 10,
+        unit: 4,
+        unitName: "หน่วยที่ 4: เครือข่ายและแพลตฟอร์มคลาวด์",
+        color: "purple",
+        title: "การสร้าง Dashboard และควบคุมอุปกรณ์ปลายทางผ่าน IoT Cloud Platform",
+        theory: "การตั้งค่า Cloud Platform (เช่น Blynk IoT หรือแพลตฟอร์มที่เลือกใช้) การกำหนด Virtual Pin และการจัดวาง Widget บนสมาร์ตโฟน/เว็บ",
+        lab: "ใบงานที่ 10: เชื่อมต่อบอร์ดเข้ากับแพลตฟอร์ม IoT เพื่อสั่งเปิด-ปิดรีเลย์จากสมาร์ตโฟน และส่งค่าอุณหภูมิขึ้นไปแสดงผลแบบ Real-time",
+        attitude: "ความละเอียดในการจัดการ Token/API Key และการตั้งค่าชนิดตัวแปรให้ตรงกัน"
+      },
+      {
+        week: 11,
+        unit: 4,
+        unitName: "หน่วยที่ 4: เครือข่ายและแพลตฟอร์มคลาวด์",
+        color: "purple",
+        title: "การรับ-ส่งข้อมูลด้วยโปรโตคอล MQTT และการควบคุมแบบ M2M",
+        theory: "หลักการทำงานแบบ Publish/Subscribe ของโปรโตคอล MQTT การออกแบบโครงสร้าง Topic และการใช้งาน MQTT Broker",
+        lab: "ใบงานที่ 11: เขียนโปรแกรมรับ-ส่งข้อมูลผ่าน MQTT สั่งงานข้ามบอร์ด หรือเชื่อมต่อกับ Dashboard (เช่น Node-RED / MQTT Explorer)",
+        attitude: "ความเป็นระเบียบในการตั้งชื่อ Topic และการจัดการจังหวะการส่งข้อมูลด้วย millis() แทน delay()"
+      },
+      {
+        week: 12,
+        unit: 4,
+        unitName: "หน่วยที่ 4: เครือข่ายและแพลตฟอร์มคลาวด์",
+        color: "purple",
+        title: "การแจ้งเตือนเหตุการณ์อัตโนมัติและการบันทึกข้อมูล (Notification & Data Logging)",
+        theory: "หลักการเรียกใช้งาน HTTP Request / Webhook เพื่อส่งข้อความแจ้งเตือนและการเก็บประวัติข้อมูลลงฐานข้อมูลหรือ Google Sheets",
+        lab: "ใบงานที่ 12: เขียนโปรแกรมตรวจจับค่าผิดปกติจากเซนเซอร์ แล้วส่งข้อความแจ้งเตือนเข้าสมาร์ตโฟน พร้อมบันทึกเวลาเกิดเหตุการณ์",
+        attitude: "ความรอบคอบในการตั้งเงื่อนไขการแจ้งเตือนไม่ให้ส่งข้อความซ้ำรัวเกินไป (การใช้ State Flag)"
+      },
+      {
+        week: 13,
+        unit: 5,
+        unitName: "หน่วยที่ 5: ประยุกต์ใช้ IoT สร้างสรรค์นวัตกรรม",
+        color: "rose",
+        title: "การวิเคราะห์ปัญหาและออกแบบโครงงานนวัตกรรม IoT",
+        theory: "แนวทางการประยุกต์ใช้ IoT แก้ปัญหาจริง (Smart Farm, Smart Home, Smart Energy) และการออกแบบกล่องควบคุมและการเดินสาย",
+        lab: "ใบงานที่ 13: เสนอหัวข้อโครงงาน เขียนผังวงจร (Schematic) ออกแบบ Flowchart การทำงานของโปรแกรม และรายการอุปกรณ์ที่เลือกใช้",
+        attitude: "การวางแผนงานอย่างเป็นระบบและคำนึงถึงความเหมาะสมในการใช้งานจริง"
+      },
+      {
+        week: 14,
+        unit: 5,
+        unitName: "หน่วยที่ 5: ประยุกต์ใช้ IoT สร้างสรรค์นวัตกรรม",
+        color: "rose",
+        title: "การติดตั้งประกอบชิ้นงานและพัฒนาโปรแกรมควบคุมระบบ",
+        theory: "เทคนิคการประกอบวงจรลงกล่องควบคุม การจัดสายไฟ และการแก้ไขจุดบกพร่อง (Debugging & Troubleshooting) ทั้งฮาร์ดแวร์และซอฟต์แวร์",
+        lab: "ใบงานที่ 14: ลงมือติดตั้งอุปกรณ์เซนเซอร์ อุปกรณ์ปลายทาง และเขียนโปรแกรมรวมระบบของโครงงาน พร้อมทดสอบความเสถียรต่อเนื่อง",
+        attitude: "ความประณีตในการประกอบชิ้นงาน การเก็บงานเดินสายไฟ และความรอบคอบในการทดสอบทุกเงื่อนไข"
+      },
+      {
+        week: 15,
+        unit: 5,
+        unitName: "หน่วยที่ 5: ประยุกต์ใช้ IoT สร้างสรรค์นวัตกรรม",
+        color: "rose",
+        badge: "นำเสนอโครงงาน & สอบปลายภาค",
+        title: "การทดสอบระบบ นำเสนอผลงานนวัตกรรม และประเมินผลลัพธ์การเรียนรู้",
+        theory: "แนวทางการนำเสนอนวัตกรรมและการสรุปองค์ความรู้รวบยอดของรายวิชา",
+        lab: "กิจกรรมประเมินผล: นำเสนอผลงานโครงงานประยุกต์ใช้ IoT กับอุปกรณ์ปลายทาง สาธิตการทำงานจริง และสอบวัดผลปลายภาค",
+        attitude: "ความรับผิดชอบต่อผลงานและการรับฟังข้อเสนอแนะเพื่อพัฒนาต่อยอด"
+      }
+    ];
+
+    let currentUnit = 'all';
+
+    const colorMap = {
+      teal: { bg: 'bg-teal-50', text: 'text-teal-700', border: 'border-teal-200', pill: 'bg-teal-600' },
+      blue: { bg: 'bg-blue-50', text: 'text-blue-700', border: 'border-blue-200', pill: 'bg-blue-600' },
+      indigo: { bg: 'bg-indigo-50', text: 'text-indigo-700', border: 'border-indigo-200', pill: 'bg-indigo-600' },
+      purple: { bg: 'bg-purple-50', text: 'text-purple-700', border: 'border-purple-200', pill: 'bg-purple-600' },
+      rose: { bg: 'bg-rose-50', text: 'text-rose-700', border: 'border-rose-200', pill: 'bg-rose-600' }
+    };
+
+    function renderWeeks() {
+      const container = document.getElementById('weeksContainer');
+      const query = document.getElementById('searchInput').value.toLowerCase().trim();
+
+      const filtered = weeksData.filter(item => {
+        const matchUnit = currentUnit === 'all' || item.unit === currentUnit;
+        const matchQuery =
+          !query ||
+          item.title.toLowerCase().includes(query) ||
+          item.theory.toLowerCase().includes(query) ||
+          item.lab.toLowerCase().includes(query) ||
+          item.attitude.toLowerCase().includes(query);
+        return matchUnit && matchQuery;
+      });
+
+      if (filtered.length === 0) {
+        container.innerHTML = `
+          <div class="col-span-full bg-white rounded-2xl p-10 text-center border border-slate-200">
+            <p class="text-slate-500 font-medium">ไม่พบสัปดาห์ที่ตรงกับคำค้นหา "${query}"</p>
+          </div>
+        `;
+        return;
+      }
+
+      container.innerHTML = filtered.map(item => {
+        const c = colorMap[item.color];
+        return `
+          <div class="bg-white rounded-2xl border border-slate-200/90 shadow-sm hover:shadow-md transition overflow-hidden flex flex-col print-break">
+            <!-- Card Header -->
+            <div class="${c.bg} px-5 py-3.5 border-b ${c.border} flex items-center justify-between gap-2">
+              <div class="flex items-center gap-2.5">
+                <span class="${c.pill} text-white text-xs font-bold font-heading px-3 py-1 rounded-lg">
+                  สัปดาห์ที่ ${item.week}
+                </span>
+                <span class="text-xs font-semibold ${c.text} font-heading">
+                  ${item.unitName}
+                </span>
+              </div>
+              <div class="flex items-center gap-2">
+                ${item.badge ? `<span class="bg-amber-500 text-white text-xs font-bold px-2.5 py-0.5 rounded-full">${item.badge}</span>` : ''}
+                <span class="text-xs text-slate-500 font-medium">4 ชม.</span>
+              </div>
+            </div>
+
+            <!-- Card Body -->
+            <div class="p-5 space-y-4 flex-1 flex flex-col justify-between">
+              <div>
+                <h3 class="text-base sm:text-lg font-bold text-slate-900 leading-snug mb-3">
+                  ${item.title}
+                </h3>
+
+                <div class="space-y-2.5 text-sm">
+                  <div class="flex items-start gap-2.5">
+                    <span class="px-2 py-0.5 rounded bg-slate-100 text-slate-700 font-medium text-xs shrink-0 mt-0.5">
+                      ทฤษฎี 1 ชม.
+                    </span>
+                    <p class="text-slate-600">${item.theory}</p>
+                  </div>
+
+                  <div class="flex items-start gap-2.5">
+                    <span class="px-2 py-0.5 rounded bg-emerald-50 text-emerald-700 font-medium text-xs shrink-0 mt-0.5 border border-emerald-200">
+                      ปฏิบัติ 3 ชม.
+                    </span>
+                    <p class="text-slate-700 font-medium">${item.lab}</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Attitude Footer -->
+              <div class="pt-3 border-t border-slate-100 flex items-start gap-2 text-xs text-slate-600">
+                <i data-lucide="shield-check" class="w-4 h-4 text-amber-600 shrink-0 mt-0.5"></i>
+                <div>
+                  <span class="font-semibold text-slate-800">การปลูกฝังความละเอียดรอบคอบ:</span> ${item.attitude}
+                </div>
+              </div>
+            </div>
+          </div>
+        `;
+      }).join('');
+
+      lucide.createIcons();
+    }
+
+    function setUnitFilter(unit) {
+      currentUnit = unit;
+      document.querySelectorAll('.unit-tab').forEach(btn => {
+        const btnUnit = btn.getAttribute('data-unit');
+        if (String(btnUnit) === String(unit)) {
+          btn.className = "unit-tab active bg-teal-700 text-white px-4 py-2 rounded-xl text-sm font-heading font-medium transition";
+        } else {
+          btn.className = "unit-tab bg-white text-slate-700 hover:bg-slate-100 border border-slate-200 px-4 py-2 rounded-xl text-sm font-heading font-medium transition";
+        }
+      });
+      renderWeeks();
+    }
+
+    function filterWeeks() {
+      renderWeeks();
+    }
+
+    // Initialize
+    document.addEventListener('DOMContentLoaded', () => {
+      renderWeeks();
+      lucide.createIcons();
+    });
+  </script>
+</body>
+</html>
